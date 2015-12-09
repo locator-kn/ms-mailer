@@ -1,6 +1,6 @@
 
 const seneca = require('seneca')();
-const module = require('./lib/module');
+const mailer = require('./lib/mailer');
 
 require('dotenv').config({path: '../.env'});
 
@@ -11,6 +11,6 @@ const patternPin = 'role:user';
 // init seneca and expose functions
 seneca
     .use(transportMethod + '-transport')
-    .add(patternPin + ',cmd:login', module.doSomething)
-    .add(patternPin + ',cmd:else', module.doSomethingElse)
+    .add(patternPin + ',cmd:login', mailer.doSomething)
+    .add(patternPin + ',cmd:else', mailer.doSomethingElse)
     .listen({type: transportMethod, pin: patternPin});

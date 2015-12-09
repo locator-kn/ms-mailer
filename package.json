@@ -1,7 +1,7 @@
 {
-  "name": "ms-sample",
+  "name": "ms-mailer",
   "version": "1.0.0",
-  "description": "microservice sample",
+  "description": "microservice mailer",
   "main": "index.js",
   "scripts": {
     "test": "ava",
