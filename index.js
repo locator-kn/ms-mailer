@@ -8,7 +8,7 @@ require('dotenv').config({path: '../.env'});
 
 // select desired transport method
 const transportMethod = process.env['SENECA_TRANSPORT_METHOD'] || 'rabbitmq';
-const patternPin = 'role:user';
+const patternPin = 'role:mailer';
 
 // init seneca and expose functions
 
