@@ -1,6 +1,8 @@
 
+
 const seneca = require('seneca')();
 const mailer = require('./lib/mailer');
+const database = require('./lib/database');
 
 require('dotenv').config({path: '../.env'});
 
@@ -9,8 +11,13 @@ const transportMethod = process.env['SENECA_TRANSPORT_METHOD'] || 'rabbitmq';
 const patternPin = 'role:user';
 
 // init seneca and expose functions
-seneca
-    .use(transportMethod + '-transport')
-    .add(patternPin + ',cmd:login', mailer.doSomething)
-    .add(patternPin + ',cmd:else', mailer.doSomethingElse)
-    .listen({type: transportMethod, pin: patternPin});
+
+
+database.connect()
+    .then((db) => {
+        seneca
+            .use(transportMethod + '-transport')
+            .add(patternPin + ',cmd:login', mailer.doSomething)
+            .add(patternPin + ',cmd:else', mailer.doSomethingElse)
+            .listen({type: transportMethod, pin: patternPin});
+    });
