@@ -30,8 +30,8 @@ database.connect()
                 cmd: 'send',
                 subject: 'pwforget',
                 data: {
-                    user_id: '569e464b4e6e2db462de2a8f',
-                    new_password: 'was geht'
+                    user_id: '569e464b4e6e2db462de2a8c',
+                    new_password: 'waaas'
                 }
             }, (err, data) => {
                 console.log('Response from mailer');
