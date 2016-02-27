@@ -24,7 +24,7 @@ database.connect()
 
             .client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
 
-            .add(patternPin + ',cmd:register,entity:device', mailer.sendMail)
+            .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendMail)
 
 
             .listen({type: 'tcp', port: 7002, pin: patternPin})
