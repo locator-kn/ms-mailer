@@ -24,9 +24,19 @@ database.connect()
 
             .client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
 
-            .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendMail)
-
-
-            .listen({type: 'tcp', port: 7002, pin: patternPin})
+            .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendPwForgottenMail)
+            /*.act({
+                role: 'mailer',
+                cmd: 'send',
+                subject: 'pwforget',
+                data: {
+                    user_id: '569e464b4e6e2db462de2a8f',
+                    new_password: 'was geht'
+                }
+            }, (err, data) => {
+                console.log('Response from mailer');
+                console.log(err, data);
+            })*/
+            .listen({type: 'tcp', port: 7005, pin: patternPin})
             .wrap(patternPin, util.reporter.report);
     });
