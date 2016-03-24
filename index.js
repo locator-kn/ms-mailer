@@ -22,7 +22,7 @@ database.connect()
         seneca
         //.use(transportMethod + '-transport')
 
-            .client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
+            //.client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
 
             .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendPwForgottenMail)
             /*.act({
