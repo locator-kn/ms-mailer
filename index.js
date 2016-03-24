@@ -6,7 +6,7 @@ require('dotenv').config({path: pwd});
 
 const seneca = require('seneca')();
 const mailer = require('./lib/mailer');
-const util = require('ms-utilities');
+//const util = require('ms-utilities');
 const database = require('./lib/database');
 
 
@@ -37,6 +37,7 @@ database.connect()
                 console.log('Response from mailer');
                 console.log(err, data);
             })*/
-            .listen({type: 'tcp', port: 7005, pin: patternPin})
-            .wrap(patternPin, util.reporter.report);
+            //.listen({type: 'tcp', port: 7005, pin: patternPin})
+            .use('mesh',{auto:true, pin:patternPin});
+            //.wrap(patternPin, util.reporter.report);
     });
