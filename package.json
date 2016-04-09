@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^1.2.0",
+    "dotenv": "^2.0.0",
     "hoek": "^3.0.4",
     "joi": "^8.0.3",
     "lodash": "^4.9.0",
@@ -20,8 +20,7 @@
     "ms-utilities": "^2.3.5",
     "seneca": "^1.4.0",
     "seneca-balance-client": "^0.4.0",
-    "seneca-mesh": "^0.7.0",
-    "seneca-rabbitmq-transport": "^0.2.1"
+    "seneca-mesh": "^0.7.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
