@@ -17,7 +17,7 @@
     "lodash": "^4.9.0",
     "mailgun-js": "^0.7.7",
     "mongodb": "^2.0.49",
-    "ms-utilities": "^3.0.0",
+    "ms-utilities": "^4.0.0",
     "seneca": "^1.4.0",
     "seneca-balance-client": "^0.4.0",
     "seneca-mesh": "^0.7.0"
