@@ -19,7 +19,7 @@
     "hoek": "^3.0.4",
     "joi": "^8.0.3",
     "lodash": "^4.10.0",
-    "mailgun-js": "^0.7.7",
+    "mailgun-js": "^0.7.8",
     "ms-utilities": "^4.0.0",
     "seneca": "^1.4.0",
     "seneca-balance-client": "^0.4.0",
