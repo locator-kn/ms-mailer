@@ -7,7 +7,8 @@
     "test": "ava",
     "documentation": "documentation index.js -o docs/ -f html -g",
     "gendocs": "./generate_docs.sh"
-  },"repository": {
+  },
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/locator-kn/ms-mailer.git"
   },
@@ -18,7 +19,7 @@
     "hoek": "^3.0.4",
     "joi": "^8.0.3",
     "lodash": "^4.9.0",
-    "mailgun-js": "^0.7.7",
+    "mailgun-js": "^0.7.8",
     "ms-utilities": "^4.0.0",
     "seneca": "^1.4.0",
     "seneca-balance-client": "^0.4.0",
