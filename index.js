@@ -20,7 +20,7 @@ seneca
 //.client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
 
     .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendPwForgottenMail)
-    .act({
+    /*.act({
         role: 'mailer',
         cmd: 'send',
         subject: 'pwforget',
@@ -31,7 +31,7 @@ seneca
     }, (err, data) => {
         console.log('Response from mailer');
         console.log(err, data);
-    })
+    })*/
     //.listen({type: 'tcp', port: 7005, pin: patternPin})
     .use('mesh', {auto: true, pin: patternPin});
 //.wrap(patternPin, util.reporter.report);
