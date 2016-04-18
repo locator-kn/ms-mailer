@@ -20,13 +20,14 @@ seneca
 //.client({type: 'tcp', port: 7010, host: 'localhost', pin: 'role:reporter'})
 
     .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendPwForgottenMail)
-    /*.act({
+    .add(patternPin + ',cmd:send,subject:generic,', mailer.sendGenericMail)
+/*    .act({
         role: 'mailer',
         cmd: 'send',
-        subject: 'pwforget',
+        subject: 'generic',
         data: {
             mail: 'SteffenGorenflo@gmail.com',
-            new_password: 'waaas'
+            name: 'Steffen'
         }
     }, (err, data) => {
         console.log('Response from mailer');
