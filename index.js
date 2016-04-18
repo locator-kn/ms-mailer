@@ -21,13 +21,13 @@ seneca
 
     .add(patternPin + ',cmd:send,subject:pwforget,', mailer.sendPwForgottenMail)
     .add(patternPin + ',cmd:send,subject:generic,', mailer.sendGenericMail)
-/*    .act({
+ /*  .act({
         role: 'mailer',
         cmd: 'send',
-        subject: 'generic',
+        subject: 'pwforget',
         data: {
             mail: 'SteffenGorenflo@gmail.com',
-            name: 'Steffen'
+            new_password: 'Steffen'
         }
     }, (err, data) => {
         console.log('Response from mailer');
