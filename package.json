@@ -19,7 +19,7 @@
     "dotenv": "^2.0.0",
     "hoek": "^4.0.0",
     "joi": "^8.0.3",
-    "lodash": "^4.11.1",
+    "lodash": "^4.11.2",
     "mailgun-js": "^0.7.10",
     "ms-utilities": "^4.0.0",
     "seneca": "^2.0.1",
