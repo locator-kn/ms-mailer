@@ -21,7 +21,7 @@
     "lodash": "^4.11.1",
     "mailgun-js": "^0.7.10",
     "ms-utilities": "^4.0.0",
-    "seneca": "^2.0.1",
+    "seneca": "^3.0.0",
     "seneca-balance-client": "^0.4.0",
     "seneca-mesh": "^0.7.0"
   },
